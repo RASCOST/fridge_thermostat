@@ -14,7 +14,7 @@
 #include "timers.h"
 
 #define HYST 700
-#define TEMP_DES 1700 //4ºC
+#define TEMP_DES 1700 //4ÂºC
 #define COMPRESSOR_ON PORTD |= ( 1 << PD7 );
 #define COMPRESSOR_OFF PORTD &= ~( 1 << PD7 );
 
@@ -67,8 +67,6 @@ void convert2ascii( uint16_t num, uint8_t *conversion )
 
 int main(void)
 {
-	//uint16_t average = 0;
-	//uint8_t n = 0;
 	char temperature[6] = { 0, 0, '.', 0, 'C', '\0' };
 	char ascii[ 4 ] = { 0, 0 ,0, '\0' };
 	
